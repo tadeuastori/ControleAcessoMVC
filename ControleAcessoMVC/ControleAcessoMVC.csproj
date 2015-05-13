@@ -111,6 +111,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\SegFuncao.cs" />
+    <Compile Include="Models\SegNivelAcesso.cs" />
+    <Compile Include="Models\SegPerfil.cs" />
+    <Compile Include="Models\SegPerfilFuncao.cs" />
+    <Compile Include="Models\SegPerfilUsuario.cs" />
+    <Compile Include="Models\SegUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -130,7 +136,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
