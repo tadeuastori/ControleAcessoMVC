@@ -1,0 +1,84 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Css/Estilo.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>SIGOS - Login</title>
+    @if (false)
+    {
+        <script src="~/Script/jquery-2.1.0-vsdoc.js"></script>
+    }
+    <script src="~/Script/jquery-2.1.0.min.js"></script>
+
+    <script>
+        $(document).ready(
+            function () {
+
+                $('#divCarregando').hide();
+                $('#txtUsuario').focus();
+
+
+                $('#btn').click(
+                    function () {
+                        $('#divCarregando').show();
+
+                        $.post(
+                            '@Url.Content("~/Home/efetuarLogin")',
+                                    $('#frmLogin').serialize(),
+                                    function (resultado) {
+                                        if (resultado.toLowerCase() == "true") {
+                                            window.open('@Url.Content("~/Modulo/Inicio")', '_self');
+                                        } else {
+                                            $('#divCarregando').hide();
+                                            alert('Usuário ou senha incorreto');
+
+                                            $('#txtUsuario').focus();
+                                        }
+                                    })
+                    })
+            });
+
+    </script>
+
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <section class="sectionLogin">
+
+        <form method="post" id="frmLogin">
+
+            <header class="headerLogin"></header>
+
+            <article class="articleLogin">
+
+                @Html.Label("lblUsuario", "Usuário")
+                @Html.TextBox("txtUsuario")
+                <br />
+                @Html.Label("lblSenha", "Senha")
+                @Html.Password("txtSenha")
+                <br />
+                <input type="button" value="Entrar" id="btn" />
+
+            </article>
+
+            <footer class="footerLogin"></footer>
+
+        </form>
+
+    </section>
+    <aside></aside>
+    <footer></footer>
+
+    <div id="divCarregando" class="divCarregando">
+        <br /><br /><br /><br /><br /><br />
+        <img src="~/Img/aguarde.gif" />
+    </div>
+
+</body>
+</html>

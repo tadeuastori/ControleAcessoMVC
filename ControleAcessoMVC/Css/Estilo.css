@@ -1,0 +1,43 @@
+﻿
+.divCarregando {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+
+.sectionLogin {
+    border: 1px black solid;
+    width: 400px;
+    height: 125px;
+    background-color: #ccc;
+    margin: 100px auto;
+    text-align: right;
+}
+
+.headerLogin {
+    border: none;
+    width: 400px;
+    height: 25px;
+    background-color: green;
+}
+
+.articleLogin {
+    border: none;
+    width: 390px;
+    height: 70px;
+    background-color: #f9f9f9;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+
+.footerLogin {
+    border: none;
+    width: 400px;
+    height: 25px;
+    background-color: green;
+}
